@@ -72,17 +72,15 @@ Aplicación de React/Redux que contiene las siguientes pantallas/rutas.
 __Pagina inicial__: landing page
 <img src="./img/landing-page.png" alt="landingpage" />
 
-__Ruta principal__: debe contener
+__Ruta principal__: contiene
 - [ ] Input de búsqueda para encontrar países por nombre
-- [ ] Área donde se verá el listado de países. Al iniciar deberá cargar los primeros resultados obtenidos desde la ruta `GET /countries` y deberá mostrar su:
-  - Imagen de la bandera
-  - Nombre
-  - Continente
+- [ ] Área donde se ve el listado de países
 - [ ] Botones/Opciones para filtrar por continente y por tipo de actividad turística
 - [ ] Botones/Opciones para ordenar tanto ascendentemente como descendentemente los países por orden alfabético y por cantidad de población
 - [ ] Paginado para ir buscando y mostrando los siguientes paises, 10 paises por pagina, mostrando los primeros 9 en la primer pagina.
+<img src="./img/home.png" alt="home" />
 
-__Ruta de detalle de país__: debe contener
+__Ruta de detalle de país__: contiene
 - [ ] Los campos mostrados en la ruta principal para cada país (imagen de la bandera, nombre, código de país de 3 letras y continente)
 - [ ] Código de país de 3 letras (id)
 - [ ] Capital
@@ -90,8 +88,9 @@ __Ruta de detalle de país__: debe contener
 - [ ] Área (Mostrarla en km2 o millones de km2)
 - [ ] Población
 - [ ] Actividades turísticas con toda su información asociada
+<img src="./img/country-details.png" alt="details" />
 
-__Ruta de creación de actividad turística__: debe contener
+__Ruta de creación de actividad turística__: contiene
 - [ ] Un formulario __controlado con JavaScript__ con los siguientes campos:
   - Nombre
   - Dificultad
@@ -100,11 +99,11 @@ __Ruta de creación de actividad turística__: debe contener
 - [ ] Posibilidad de seleccionar/agregar varios países en simultáneo
 - [ ] Botón/Opción para crear una nueva actividad turística
 
-> Es requisito que el formulario de creación esté validado con JavaScript y no sólo con validaciones HTML. Pueden agregar las validaciones que consideren. Por ejemplo: Que el nombre de la actividad no pueda contener símbolos, que la duración no pueda exceder determinado valor, etc.
+<img src="./img/create-activity.png" alt="createActivity" />
 
 #### Base de datos
 
-El modelo de la base de datos deberá tener las siguientes entidades (Aquellas propiedades marcadas con asterísco deben ser obligatorias):
+El modelo de la base de datos tiene las siguientes entidades:
 
 - [ ] País con las siguientes propiedades:
   - ID (Código de 3 letras) *
@@ -122,30 +121,20 @@ El modelo de la base de datos deberá tener las siguientes entidades (Aquellas p
   - Duración
   - Temporada (Verano, Otoño, Invierno o Primavera)
 
-La relación entre ambas entidades debe ser de muchos a muchos ya que un país puede contener varias actividades turísticas y, a su vez, una actividad turística puede darse en múltiples países. Por ejemplo una actividad podría ser "Ski" que podría ocurrir en Argentina y también en Estados Unidos, pero a su vez Argentina podría también incluir "Rafting".
-
 #### Backend
 
-Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
-
-__IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y paginados brindados por la API externa, todas estas funcionalidades tienen que implementarlas ustedes.
+Servidor en Node/Express con las siguientes rutas:
 
 - [ ] __GET /countries__:
-  - En una primera instancia deberán traer todos los países desde restcountries y guardarlos en su propia base de datos y luego ya utilizarlos desde allí (Debe almacenar solo los datos necesarios para la ruta principal)
-  - Obtener un listado de los paises.
+  - En una primera instancia trae todos los países desde restcountries y los guarda en la propia base de datos y luego ya se utilizan desde allí
+  - Listado de los paises.
 - [ ] __GET /countries/{idPais}__:
-  - Obtener el detalle de un país en particular
-  - Debe traer solo los datos pedidos en la ruta de detalle de país
-  - Incluir los datos de las actividades turísticas correspondientes
+  - Detalle de un país en particular
+  - Trae solo los datos pedidos en la ruta de detalle de país
+  - Incluye los datos de las actividades turísticas correspondientes
 - [ ] __GET /countries?name="..."__:
-  - Obtener los países que coincidan con el nombre pasado como query parameter (No necesariamente tiene que ser una matcheo exacto)
-  - Si no existe ningún país mostrar un mensaje adecuado
+  - Obtiene los países que coinciden con el nombre pasado como query parameter (No es un matcheo exacto)
+  - Si no existe ningún país muestra un mensaje adecuado
 - [ ] __POST /activity__:
   - Recibe los datos recolectados desde el formulario controlado de la ruta de creación de actividad turística por body
   - Crea una actividad turística en la base de datos
-
-
-#### Testing
-- [ ] Al menos tener un componente del frontend con sus tests respectivos
-- [ ] Al menos tener una ruta del backend con sus tests respectivos
-- [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
