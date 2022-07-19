@@ -1,0 +1,10 @@
+.background{
+    background-image: linear-gradient(
+        rgb(0,0,0,0.7),
+        rgb(0,0,0,0.7)
+        ), url(../../assets/background_main.jpg);
+    background-position:100%;
+    background-size: cover;
+    height:auto;
+    color: whitesmoke;
+}

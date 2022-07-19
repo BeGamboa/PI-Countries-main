@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body {
+    background-image: linear-gradient(
+        rgb(0,0,0,0.7),
+        rgb(0,0,0,0.7)
+      ), url(../../assets/background_main.jpg);
+      background-position:100%;
+      background-size:cover;
+      height:100%;
+      color: rgb(31, 31, 31);
+      background-color: #eaeff1;
+    font-family: 'Acme', sans-serif;
+    font-size: 16px;
+  }
+
+.activContainer {
+  max-width: 500px;
+  margin: 2vh auto;
+  background-color: rgba(242, 240, 240, 0.590);
+  border: 1px solid #5f6162d4;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px 4px rgba(163, 163, 163);
+  padding: 8px;
+  text-decoration: none;
+}
+
+.touImg {
+  max-width: 490px;
+  border-radius: 12px;
+}
+
+  .formContainer label{  
+    max-width: fit-content;
+    display: inline-block;
+    margin: 2px 2px;
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 2;
+    color: #464e57;
+  }
+
+  .formContainer span {
+      font-size: 12px;
+      color: rgb(255, 27, 27);
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 500;
+  }
+
+  .formContainer input {
+    font-family: 'Acme', sans-serif;
+    font-size: 14px;
+    color: #4e5660;
+    line-height: 150%;
+    cursor:text;
+  }
+
+  .butt {
+    font-family: 'Acme', sans-serif;
+	font-size: 14px;
+	color:rgb(27, 27, 27);
+	background-color: rgb(242, 242, 242);
+	cursor: pointer;
+	padding: 8px 8px;
+	margin: 2vh 1vw;
+	border-radius: 15px;
+}
+.butt:hover{
+  background: rgb(158, 158, 158);
+  color: rgb(27, 27, 27);
+  box-shadow: 0 0 1px #03e9f4,
+        0 0 5px #03e9f4,
+        0 0 10px #03e9f4,
+        0 0 15px #03e9f4;
+  }
+
+.subm {
+    font-family: 'Acme', sans-serif;
+	font-size: 14px;
+	color:rgb(27, 27, 27);
+	background-color: rgb(242, 242, 242);
+	cursor: pointer;
+	padding: 8px 8px;
+	margin: 2vh 1vw;
+	border-radius: 15px;
+}
+.subm:hover{
+  background: rgb(158, 158, 158);
+  color: rgb(27, 27, 27);
+  box-shadow: 0 0 1px #03e9f4,
+        0 0 5px #03e9f4,
+        0 0 10px #03e9f4,
+        0 0 15px #03e9f4;
+  }
+  .xButton {
+    font-family: 'Acme', sans-serif;
+	font-size: 14px;
+	color:rgb(27, 27, 27);
+	background-color: rgb(242, 242, 242);
+	cursor: pointer;
+	margin: 2vh 1vw;
+	border-radius: 8px;
+}
+.xButton:hover{
+  background: rgb(158, 158, 158);
+  color: rgb(27, 27, 27);
+  box-shadow: 0 0 1px #03e9f4,
+        0 0 5px #03e9f4,
+        0 0 10px #03e9f4,
+        0 0 15px #03e9f4;
+}
